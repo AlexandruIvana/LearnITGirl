@@ -34,5 +34,32 @@ public class Lesson2 {
 			System.out.print(mySecondArray[i]+" ");
 		}
 			
+		int helper = max;
+		int invert = 0;
+		while (helper !=0){
+			invert=invert*10+helper%10;
+			helper=helper/10;
+		}
+		if (max==invert){
+			System.out.println("Max is a palindrome");
+		}
+		else {
+			System.out.println("Max is not a palindrome");
+		}
+		int loopHelper;
+		for (int i=0; i<5; i++) {
+			invert=0;
+			loopHelper=mySecondArray[i];
+			 while (loopHelper != 0){
+				 invert=invert*10+loopHelper%10;
+				 loopHelper=loopHelper/10;
+			 }
+			 if (mySecondArray[i]==invert) {
+				 System.out.println("It is a palindrome");
+			 }
+			 else {
+				 System.out.println("It is not");
+			 }
+		}
 }
 }
