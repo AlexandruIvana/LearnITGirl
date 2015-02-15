@@ -46,7 +46,7 @@ public class Lesson3 {
     			System.out.print(matrix[i][j]);
     			
     		}
-    	for (int i=0; i<2; i++)
+    	/*for (int i=0; i<2; i++)
     	    for (int j=0; j<2; j++)
     	    {
     	    	if (j>i)
@@ -55,6 +55,15 @@ public class Lesson3 {
     	    		else
     	    		System.out.print(matrix[i][j]);
     	    }
+    	    */
+    	
+    	boolean symmetry=true;
+    	for (int i=0; i<2; i++)
+    		for (int j=0; j<2; j++)
+    		{ 
+    			if (matrix[i][j]!=matrix[j][i]) symmetry=false;
+    		}
+    	System.out.print("the matrix is symmetric - " + symmetry);
     	scanner.close();
-    }
+	}   
 }
